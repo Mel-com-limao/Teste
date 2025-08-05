@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz do Amor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Quiz do Amor 💌</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="linha.html">Linha do Tempo</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="secreta.html">Área Secreta</a>
+    </nav>
+  </header>
+
+  <main>
+    <p><strong>Pergunta:</strong> Em qual mês a gente começou a ficar?</p>
+    <input type="text" id="resposta" />
+    <button onclick="verificar()">Responder</button>
+    <p id="resultado"></p>
+    <p id="pista" style="display: none;"><strong>Pista 2:</strong> A senha termina com <code>MESES</code></p>
+  </main>
+
+  <script>
+    function verificar() {
+      const resposta = document.getElementById("resposta").value.toLowerCase();
+      const resultado = document.getElementById("resultado");
+      const pista = document.getElementById("pista");
+
+      if (resposta === "maio") {
+        resultado.textContent = "Acertou! ♥";
+        pista.style.display = "block";
+      } else {
+        resultado.textContent = "Hmm... tenta de novo.";
+        pista.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
