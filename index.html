@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5 Meses com Você 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>5 Meses com Você 💜</h1>
+    <p>Esse site é um presente especial. Cada aba tem uma parte da senha. Quando descobrir tudo... vai destravar a surpresa final 🎁</p>
+  </header>
+
+  <nav>
+    <button onclick="showTab('inicio')">Início</button>
+    <button onclick="showTab('linha')">Linha do Tempo</button>
+    <button onclick="showTab('quiz')">Quiz</button>
+    <button onclick="showTab('galeria')">Galeria</button>
+    <button onclick="showTab('secreta')">Área Secreta</button>
+  </nav>
+
+  <section id="inicio" class="active">
+    <h2>Bem-vindo ao nosso cantinho digital</h2>
+    <p>A cada clique, uma memória. A cada memória, uma pista. No fim... uma música feita só pra você.</p>
+  </section>
+
+  <section id="linha">
+    <h2>Nossa Linha do Tempo 🕰️</h2>
+    <ul>
+      <li><strong>Maio:</strong> O começo de tudo 💫</li>
+      <li><strong>Junho:</strong> Risadas infinitas nos áudios</li>
+      <li><strong>Julho:</strong> Conversas que vararam a madrugada</li>
+    </ul>
+    <p><strong>Pista 1:</strong> A senha começa com: <code>05</code></p>
+  </section>
+
+  <section id="quiz">
+    <h2>Desafios do Amor 🧠</h2>
+    <div class="quiz-question">
+      <p>Qual foi o primeiro mês que começamos a ficar?</p>
+      <input type="text" id="resposta1"/>
+      <button onclick="verificaResposta()">Responder</button>
+      <p id="respostaCerta" class="hidden-message">Boa! A segunda parte da senha é: <code>MESES</code></p>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Nossa Galeria 📸</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/150" alt="Foto 1">
+      <img src="https://via.placeholder.com/150" alt="Foto 2">
+    </div>
+    <p><strong>Extra:</strong> Cada imagem tem uma história... assim como cada nota da música que vou tocar pra você 🎶</p>
+  </section>
+
+  <section id="secreta">
+    <h2>Área Secreta 🔐</h2>
+    <p>Digite a senha completa para acessar a surpresa:</p>
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <button onclick="verificaSenha()">Entrar</button>
+    <div id="conteudoSecreto" class="secret-player" style="display: none;">
+      <h3>💜 Surpresa desbloqueada 💜</h3>
+      <p>Essa música é o que meu coração queria te dizer com notas...</p>
+      <!-- Substitua abaixo pelo seu cover depois -->
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/YOUTUBE_ID_AQUI" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p id="erroSenha" style="color:red;"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
